@@ -1,0 +1,30 @@
+/cygdrive/C/cygwin64/bin/make -C ./lib
+make[1]: Entering directory '/cygdrive/c/Users/jeff/Documents/NetBeansProjects/rpi-rgb-led-matrix/lib'
+/bin/sh: cmp: command not found
+g++ -I../include -Wall -O3 -g -fPIC  -DDEFAULT_HARDWARE='"regular"' -Wextra -Wno-unused-parameter -fno-exceptions -c -o gpio.o gpio.cc
+gpio.cc:1:0: warning: -fPIC ignored for target (all code is position independent)
+ // -*- mode: c++; c-basic-offset: 2; indent-tabs-mode: nil; -*-
+ ^
+g++ -I../include -Wall -O3 -g -fPIC  -DDEFAULT_HARDWARE='"regular"' -Wextra -Wno-unused-parameter -fno-exceptions -c -o led-matrix.o led-matrix.cc
+led-matrix.cc:1:0: warning: -fPIC ignored for target (all code is position independent)
+ // -*- mode: c++; c-basic-offset: 2; indent-tabs-mode: nil; -*-
+ ^
+g++ -I../include -Wall -O3 -g -fPIC  -DDEFAULT_HARDWARE='"regular"' -Wextra -Wno-unused-parameter -fno-exceptions -c -o options-initialize.o options-initialize.cc
+options-initialize.cc:1:0: warning: -fPIC ignored for target (all code is position independent)
+ // -*- mode: c++; c-basic-offset: 2; indent-tabs-mode: nil; -*-
+ ^
+options-initialize.cc: In function 'bool rgb_matrix::{anonymous}::drop_privs(const char*, const char*)':
+options-initialize.cc:244:36: error: 'getresuid' was not declared in this scope
+   if (getresuid(&ruid, &euid, &suid) >= 0) {
+                                    ^
+options-initialize.cc:254:48: error: 'setresgid' was not declared in this scope
+   if (setresgid(g->gr_gid, g->gr_gid, g->gr_gid) != 0) {
+                                                ^
+options-initialize.cc:263:48: error: 'setresuid' was not declared in this scope
+   if (setresuid(p->pw_uid, p->pw_uid, p->pw_uid) != 0) {
+                                                ^
+Makefile:183: recipe for target 'options-initialize.o' failed
+make[1]: *** [options-initialize.o] Error 1
+make[1]: Leaving directory '/cygdrive/c/Users/jeff/Documents/NetBeansProjects/rpi-rgb-led-matrix/lib'
+Makefile:15: recipe for target 'lib/librgbmatrix.a' failed
+make: *** [lib/librgbmatrix.a] Error 2
