@@ -4,7 +4,7 @@
 RGB_LIBDIR=./lib
 RGB_LIBRARY_NAME=rgbmatrix
 RGB_LIBRARY=$(RGB_LIBDIR)/lib$(RGB_LIBRARY_NAME).a
-
+HARDWARE_DESC=adafruit-hat
 # Some language bindings.
 PYTHON_LIB_DIR=bindings/python
 CSHARP_LIB_DIR=bindings/c\#
