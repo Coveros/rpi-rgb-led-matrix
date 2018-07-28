@@ -19,7 +19,7 @@ class RunText(SampleBase):
         font.LoadFont("../../../fonts/10x20.bdf")
         pos = offscreen_canvas.width
         my_text = self.args.text
-        red = int(self.args.red))
+        red = int(self.args.red)
         green = int(self.args.green)
         blue = int(self.args.blue)
         textColor = graphics.Color(red, green, blue)
