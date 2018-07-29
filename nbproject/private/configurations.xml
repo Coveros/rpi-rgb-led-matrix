@@ -72,6 +72,14 @@
         <in>transformer.cc</in>
         <in>utf8-internal.h</in>
       </df>
+      <df name="python">
+        <df name="rgbmatrix">
+          <in>core.cpp</in>
+          <in>graphics.cpp</in>
+        </df>
+        <df name="samples">
+        </df>
+      </df>
       <df name="utils">
         <in>led-image-viewer.cc</in>
         <in>video-viewer.cc</in>
@@ -83,7 +91,7 @@
     <conf name="Default" type="0">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <platform>3</platform>
+        <platform>2</platform>
       </toolsSet>
       <compile>
         <compiledirpicklist>

@@ -2,10 +2,29 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
+      <df name="examples-api-use">
+        <in>c-example.c</in>
+        <in>clock.cc</in>
+        <in>demo-main.cc</in>
+        <in>ledcat.cc</in>
+        <in>minimal-example.cc</in>
+        <in>scrolling-text-example.cc</in>
+        <in>text-example.cc</in>
+      </df>
       <df name="lib">
+        <in>bdf-font.cc</in>
+        <in>content-streamer.cc</in>
+        <in>framebuffer.cc</in>
         <in>gpio.cc</in>
+        <in>graphics.cc</in>
+        <in>hardware-mapping.c</in>
+        <in>led-matrix-c.cc</in>
         <in>led-matrix.cc</in>
+        <in>multiplex-mappers.cc</in>
         <in>options-initialize.cc</in>
+        <in>pixel-mapper.cc</in>
+        <in>thread.cc</in>
+        <in>transformer.cc</in>
       </df>
     </df>
     <logicalFolder name="ExternalFiles"
@@ -29,7 +48,10 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <flagsDictionary>
-        <element flagsID="0" commonFlags="-O3 -fPIC -fno-exceptions"/>
+        <element flagsID="0" commonFlags="-O3"/>
+        <element flagsID="1" commonFlags="-O3 -fPIC -fno-exceptions"/>
+        <element flagsID="2" commonFlags="-O3 -g"/>
+        <element flagsID="3" commonFlags="-O3 -g -fPIC"/>
       </flagsDictionary>
       <codeAssistance>
       </codeAssistance>
@@ -39,13 +61,15 @@
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>include</pElem>
+            </incDir>
+          </cTool>
           <ccTool>
             <incDir>
               <pElem>include</pElem>
             </incDir>
-            <preprocessorList>
-              <Elem>DEFAULT_HARDWARE="regular"</Elem>
-            </preprocessorList>
           </ccTool>
         </makeTool>
         <preBuild>
@@ -53,16 +77,102 @@
           <preBuildCommand></preBuildCommand>
         </preBuild>
       </makefileType>
-      <item path="lib/gpio.cc" ex="false" tool="1" flavor2="0">
+      <item path="examples-api-use/c-example.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="2">
+        </cTool>
+      </item>
+      <item path="examples-api-use/clock.cc" ex="false" tool="1" flavor2="0">
         <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="examples-api-use/demo-main.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="examples-api-use/ledcat.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="examples-api-use/minimal-example.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="examples-api-use/scrolling-text-example.cc"
+            ex="false"
+            tool="1"
+            flavor2="0">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="examples-api-use/text-example.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <folder path="0/lib">
+        <cTool>
+          <preprocessorList>
+            <Elem>DEFAULT_HARDWARE="regular"</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <preprocessorList>
+            <Elem>DEFAULT_HARDWARE="regular"</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <item path="lib/bdf-font.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="lib/content-streamer.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="lib/framebuffer.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="lib/gpio.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="lib/graphics.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="lib/hardware-mapping.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="3">
+        </cTool>
+      </item>
+      <item path="lib/led-matrix-c.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
         </ccTool>
       </item>
       <item path="lib/led-matrix.cc" ex="false" tool="1" flavor2="0">
-        <ccTool flags="0">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="lib/multiplex-mappers.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
         </ccTool>
       </item>
       <item path="lib/options-initialize.cc" ex="false" tool="1" flavor2="0">
-        <ccTool flags="0">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="lib/pixel-mapper.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="lib/thread.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
+        </ccTool>
+      </item>
+      <item path="lib/transformer.cc" ex="false" tool="1" flavor2="0">
+        <ccTool flags="1">
         </ccTool>
       </item>
     </conf>
