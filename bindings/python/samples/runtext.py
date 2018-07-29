@@ -23,7 +23,7 @@ class RunText(SampleBase):
         green = int(self.args.green)
         blue = int(self.args.blue)
         textColor = graphics.Color(red, green, blue)
-
+        len=0
 
         while (pos + len >= 0):
             offscreen_canvas.Clear()
